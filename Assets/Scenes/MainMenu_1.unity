@@ -26883,7 +26883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8b910519fd94c4987d7498bb37abd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainSceneName: SampleScene
+  mainSceneName: Map
 --- !u!1001 &825960686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53734,6 +53734,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 2db7e17401e08b94697ecd7acce75ab1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0618b076b0ee0864395f3f3b8b90496d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db7e17401e08b94697ecd7acce75ab1, type: 3}
 --- !u!1 &1693150977
