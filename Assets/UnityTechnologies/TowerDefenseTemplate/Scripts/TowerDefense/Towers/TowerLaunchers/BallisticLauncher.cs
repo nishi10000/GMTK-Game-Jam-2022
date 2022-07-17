@@ -16,6 +16,8 @@ namespace TowerDefense.Towers.TowerLaunchers
 		/// </summary>
 		public ParticleSystem fireParticleSystem;
 
+		public yakuzaAnimationContoroller yakuzaAnimationContoroller;
+
 		/// <summary>
 		/// Launches a single projectile at a single enemy from a single firing point
 		/// </summary>
@@ -36,6 +38,7 @@ namespace TowerDefense.Towers.TowerLaunchers
 			{
 				Debug.LogError("No ballistic projectile attached to projectile");
 				DestroyImmediate(projectile);
+				yakuzaAnimationContoroller.shooterAnimationEnd();
 				return;
 			}
 			Vector3 targetPoint;
@@ -58,6 +61,7 @@ namespace TowerDefense.Towers.TowerLaunchers
 			ballisticProjectile.FireAtPoint(startPosition, targetPoint);
 			ballisticProjectile.IgnoreCollision(LevelManager.instance.environmentColliders);
 			PlayParticles(fireParticleSystem, startPosition, targetPoint);
+			yakuzaAnimationContoroller.shooterAnimation();
 		}
 	}
 }

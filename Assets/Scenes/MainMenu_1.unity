@@ -64240,6 +64240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: characterMedium (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 543725175494163567, guid: 95ddefb61118a6149aea2b7bf64de9bc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 411978fe0f7b2244dbf15879bf29c204, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ddefb61118a6149aea2b7bf64de9bc, type: 3}
 --- !u!1001 &4411957596254113957
