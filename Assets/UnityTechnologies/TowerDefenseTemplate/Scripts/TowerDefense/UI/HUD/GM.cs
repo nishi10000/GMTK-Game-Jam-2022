@@ -13,7 +13,12 @@ public class GM : MonoBehaviour
     public RawImage img3;
     public TextMeshProUGUI text;
     public TowerDefense.UI.HUD.BuildSidebar buildSideBar;
-    private float countup = 3.0f;
+    public AudioClip sound1;
+    public AudioClip sound2;
+    AudioSource audioSource;
+    public float rollTime;
+    public float chargeTime;
+    private float countup = 10.0f;
     private bool pushFlg = false;
 
     //表示させる画像リスト
@@ -30,13 +35,16 @@ public class GM : MonoBehaviour
 
         text = GameObject.Find("DiceTotalText").GetComponent<TextMeshProUGUI>();
 
+        //Componentを取得
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Update()
     {
         //時間をカウントする
         countup += Time.deltaTime;
-        if (countup <= 3.0f)
+        if (countup <= rollTime)
         {
             ChangeImage1();
             ChangeImage2();
@@ -62,10 +70,17 @@ public class GM : MonoBehaviour
     //ボタンが押された時の関数
     public void PudhButton()
     {
+        if (countup <= rollTime + chargeTime)
+        {
+            return;
+        }
+
         pushFlg = true;
         countup = 0.0f;
 
         text.text = "";
+        audioSource.PlayOneShot(sound1);
+
     }
 
     //3つのダイスを振る関数
@@ -85,6 +100,8 @@ public class GM : MonoBehaviour
         text.text = total.ToString();
 
         buildSideBar.AddCurrency(total);
+
+        audioSource.PlayOneShot(sound2);
     }
 
     //ボタンで呼び出される関数
