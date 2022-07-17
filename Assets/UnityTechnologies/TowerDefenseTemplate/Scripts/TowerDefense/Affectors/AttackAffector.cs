@@ -84,6 +84,9 @@ namespace TowerDefense.Affectors
 		/// </summary>
 		protected Targetable m_TrackingEnemy;
 
+		//public yakuzaAnimationContoroller yakuzaAnimationContoroller;
+
+
 		/// <summary>
 		/// Gets the search rate from the targetter
 		/// </summary>

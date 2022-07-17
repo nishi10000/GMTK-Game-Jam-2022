@@ -5,6 +5,8 @@ using UnityEngine;
 public class yakuzaAnimationContoroller : MonoBehaviour
 {
     Animator animator;
+    [SerializeField]
+    private string AnimationTransitionName= "NowShooting";
 
     // スタート時に呼ばれる
     void Start()
@@ -27,10 +29,10 @@ public class yakuzaAnimationContoroller : MonoBehaviour
 
     public void shooterAnimation()
     {
-        animator.SetBool("NowShooting", true);
+        animator.SetBool(AnimationTransitionName, true);
     }
     public void shooterAnimationEnd()
     {
-        animator.SetBool("NowShooting", false);
+        animator.SetBool(AnimationTransitionName, false);
     }
 }

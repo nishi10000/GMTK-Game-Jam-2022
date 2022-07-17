@@ -13,6 +13,8 @@ namespace TowerDefense.Towers.TowerLaunchers
 		/// The particle system used for providing launch feedback
 		/// </summary>
 		public ParticleSystem fireParticleSystem;
+		public yakuzaAnimationContoroller yakuzaAnimationContoroller;
+
 
 
 		/// <summary>
@@ -32,11 +34,13 @@ namespace TowerDefense.Towers.TowerLaunchers
 			var hitscanAttack = attack.GetComponent<HitscanAttack>();
 			if (hitscanAttack == null)
 			{
+				yakuzaAnimationContoroller.shooterAnimationEnd();
 				return;
 			}
 			hitscanAttack.transform.position = firingPoint.position;
 			hitscanAttack.AttackEnemy(firingPoint.position, enemy);
 			PlayParticles(fireParticleSystem, firingPoint.position, enemy.position);
+			yakuzaAnimationContoroller.shooterAnimation();
 		}
 	}
 }
