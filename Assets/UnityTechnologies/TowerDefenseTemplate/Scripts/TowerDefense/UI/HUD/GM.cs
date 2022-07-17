@@ -93,7 +93,7 @@ public class GM : MonoBehaviour
         //１～表示する画像の数をランダムで算出
         int random = Random.Range(1, texture_list.Count);
 
-        Debug.Log("ダイス１のランダム値は" + random);
+        //Debug.Log("ダイス１のランダム値は" + random);
 
         img1.texture = texture_list[random];
 
@@ -105,7 +105,7 @@ public class GM : MonoBehaviour
         //１～表示する画像の数をランダムで算出
         int random = Random.Range(1, texture_list.Count);
 
-        Debug.Log("ダイス２のランダム値は" + random);
+        //Debug.Log("ダイス２のランダム値は" + random);
 
         img2.texture = texture_list[random];
 
@@ -117,7 +117,7 @@ public class GM : MonoBehaviour
         //１～表示する画像の数をランダムで算出
         int random = Random.Range(1, texture_list.Count);
 
-        Debug.Log("ダイス３のランダム値は" + random);
+        //Debug.Log("ダイス３のランダム値は" + random);
 
         img3.texture = texture_list[random];
 
