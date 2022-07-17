@@ -5100,6 +5100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticleSystem: {fileID: 198891600796299106}
+  yakuzaAnimationContoroller: {fileID: 0}
 --- !u!114 &114348681867643788
 MonoBehaviour:
   m_ObjectHideFlags: 0
